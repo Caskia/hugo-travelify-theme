@@ -9,7 +9,7 @@
             <li class="rpwe-il rpwe-classfix">
                 <a class="rpwe-img" href="{{ .RelPermalink }}" class="thumbnail">
 		    {{ if and (isset .Params "banner") (not (eq .Params.banner "")) }}
-                    <img class="rpwe-alignleft rpwe-thumb" src="{{ .Params.banner | absURL }}" alt="{{ $.Title }}">
+                    <img class="rpwe-alignleft rpwe-thumb" src="{{ .Params.banner | relURL }}" alt="{{ $.Title }}">
 		    {{else}}
                     <span class="thumbnail-image thumbnail-none"></span>
 		    {{ end }}

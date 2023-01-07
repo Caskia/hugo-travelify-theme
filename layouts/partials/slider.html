@@ -14,7 +14,7 @@
             {{ if eq (len $vids) 0 }}
 		        <figure>
 			          <a href="{{ .url }}" title="{{ .Title }}">
-			              <img src="{{ .banner | absURL }}" class="pngfix wp-post-image" alt="{{ .Title }}" title="{{ .Title }}">
+			              <img src="{{ .banner | relURL }}" class="pngfix wp-post-image" alt="{{ .Title }}" title="{{ .Title }}">
 		            </a>
 	          </figure>
             {{ else }}
