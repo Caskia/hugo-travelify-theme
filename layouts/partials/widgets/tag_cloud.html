@@ -6,7 +6,7 @@
   <h3 class="widget-title">        {{with .Site.Data.l10n.widgets.tag_cloud.title}}{{.}}{{end}}</h3>
   <div class="tagcloud">
 <!--    <h2>        {{with .Site.Data.l10n.widgets.tag_cloud.title}}{{.}}{{end}}</h2> -->
-{{ $baseurl := .Site.BaseURL }}
+{{ $baseurl := "/" }}
 {{ range $name, $value := .Site.Taxonomies.tags }}
     {{ if (gt $value.Count $min_count) }}
     {{ with site.GetPage (printf "/%s/%s" "tags" ($name | urlize)) }}
