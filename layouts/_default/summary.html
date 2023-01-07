@@ -18,7 +18,7 @@
 
     {{ partial "article_footer" . }}
       <span>
-    <a class="readmore" href="{{ .Permalink }}">
+    <a class="readmore" href="{{ .RelPermalink }}">
       {{with .Site.Data.l10n.articles.read_more}}{{.}}{{end}}
     </a>
   </span>

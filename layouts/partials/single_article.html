@@ -21,7 +21,7 @@
 		    {{ range $k, $tag := .Params.tags }}
 			{{ if $k }} &middot; {{ end }}
 			{{ with site.GetPage (printf "/%s/%s" "tags" ($tag | urlize)) }}
-		    <a href="{{ .Permalink }}" rel="tag">{{ $tag }}</a>
+		    <a href="{{ .RelPermalink }}" rel="tag">{{ $tag }}</a>
 			{{ end }}
 		    {{ end }}
 		</div>

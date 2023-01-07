@@ -26,7 +26,7 @@
     <span class="category">
       {{ range $k, $v := .Params.categories }}
       {{ with site.GetPage (printf "/%s/%s" "categories" ($v | urlize)) }}
-      <a class="article-category-link" href="{{ .Permalink }}">{{ $v }}</a>
+      <a class="article-category-link" href="{{ .RelPermalink }}">{{ $v }}</a>
       {{ if lt $k (sub $categoriesLen 1) }},{{ end }}
       {{ end }}
       {{ end }}
@@ -37,13 +37,13 @@
     {{ if .Site.Params.Views.enable }}
 	  <div class="views">
 	    <span class="views">
-	        <img src="https://visitor-badge.glitch.me/badge?page_id={{ .Permalink }}" alt="Views"/>
+	        <img src="https://visitor-badge.glitch.me/badge?page_id={{ .RelPermalink }}" alt="Views"/>
 	    </span>
 	  </div>
     {{ end }}
     {{ if and (not (eq .Site.DisqusShortname "")) (not .Params.disable_comments) }}
     <span class="comments">
-      <a href="{{ .Permalink }}#disqus_thread">{{with .Site.Data.l10n.articles.comments}}{{.}}{{end}}
+      <a href="{{ .RelPermalink }}#disqus_thread">{{with .Site.Data.l10n.articles.comments}}{{.}}{{end}}
       </a>
     </span>
     {{ end }}

@@ -24,7 +24,7 @@
             {{ end }}
 		        <article class="featured-text">
 			          <div class="featured-title">
-			              <a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a>
+			              <a href="{{ .RelPermalink }}" title="{{ .Title }}">{{ .Title }}</a>
 		            </div><!-- .featured-title -->
 			          <div class="featured-content">{{ printf "%s" .Summary | markdownify }}
 		            </div><!-- .featured-content -->
